@@ -20,6 +20,7 @@ header{
 }
 .nav-btn{
     background: none;
+    display: none;
     color: none;
     border: none;
     outline: none;
