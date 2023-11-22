@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ifedayo Gbadebo</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&display=swap" rel="stylesheet">
@@ -25,8 +25,9 @@
                 <li class="cont-link"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button class="nav-btn">
+        <button class="nav-btn" onclick="toggleMenu()">
             <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
         </button>
         
     </header>
@@ -38,7 +39,7 @@
                 </div>
                 <div class="info">
                     <h2><i></i> Hey, I'm Gbadebo Ifedayo</h2>
-                    <p>I specialize in solving problems to create visually stunning websites and transform ideas
+                    <p>I specialize in solving problems by creating visually stunning websites and transforming ideas
                         into interactive web applications</p>
                 </div>
             </article>
@@ -135,7 +136,6 @@
                 <a href="https://dev.to/gbadeboife/how-to-create-a-currency-converter-app-using-exchangerate-rest-api-23bo" target="_blank">Read post</a>
             </div>
 
-            <a href="https://ifedayog.hashnode.dev/" target="_blank" class="to-blog">Visit my blog <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             
             <div class="card-2">
                 <h4>Exploring lesser-known React hooks and their importance</h4>
@@ -143,13 +143,15 @@
                 <span>Hashnode</span>
                 <a href="https://ifedayog.hashnode.dev/exploring-lesser-known-react-hooks-and-their-importance" target="_blank">Read post</a>
             </div>
-
+            
             <div class="card-3">
                 <h4>Ensuring effective cloud security: Best practices and real-world insights</h4>
                 <p>As most organizations are storing their data on the cloud, read on the best steps these organizations can take in order to prevent data breaches.</p>
                 <span>Dev.to</span>
                 <a href="https://dev.to/gbadeboife/ensuring-effective-cloud-security-best-practices-and-real-world-insights-1ang" target="_blank">Read post</a>
             </div>
+
+            <a href="https://ifedayog.hashnode.dev/" target="_blank" class="to-blog">Visit my blog <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </section>
 
         <section class="testimonials">
@@ -192,6 +194,7 @@
             <p><i class="fa-regular fa-copyright"></i> Copyright 2023. Made by <span>Gbadebo Ifedayo</span></p>
         </footer>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     
 </body>
 </html>
