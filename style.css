@@ -840,14 +840,17 @@ footer p i{
         top: 20px;
         right: 5%;
     }
+    .nav-btn i{
+        font-size: 25px;
+    }
     .nav-btn .fa-xmark{
         display: none;
     }
     .logo img{
-        width: 30px;
+        width: 45px;
     }
     .logo h1{
-        font-size: 20px;
+        font-size: 25px;
     }
     header{
         align-items: unset;
@@ -870,7 +873,7 @@ footer p i{
         justify-content: unset;
     }
     .header-nav ul li{
-        font-size: 14px;
+        font-size: 18px;
         width: 100%;
         text-align: right;
         color: rgb(150 161 192);
@@ -917,20 +920,20 @@ footer p i{
     }
     .info p{
         text-align: center;
-        font-size: 13px;
+        font-size: 15px;
         width: 60%;
         margin: auto;
-        line-height: 17px;
+        line-height: 23px;
     }
     .soc-card{
-        height: 35px;
+        height: 40px;
         position: fixed;
         right: unset;
         z-index: 500;
         padding: 0;
         display: none;
         align-items: center;
-        width: 30%;
+        width: 40%;
         justify-content: space-around;
         top: unset;
         bottom: 10%;
@@ -939,11 +942,11 @@ footer p i{
         transform: translateX(-50%);
     }
     .soc-card i{
-        font-size: 18px;
+        font-size: 23px;
     }
     .about h2, .projects h2, .writing h2,
     .contact h2, .testimonials h2{
-        font-size: 25px;
+        font-size: 30px;
         margin-bottom: 15px;
     }
 
@@ -958,8 +961,8 @@ footer p i{
         width: 100%;
     }
     .about article p{
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 13px;
+        line-height: 23px;
         margin-bottom: 13px;
     }
     .abt-cta{
@@ -970,7 +973,7 @@ footer p i{
         font-size: 18px;
     }
     .skills ul li{
-        font-size: 10px;
+        font-size: 12px;
         border-radius: 5px;
         margin-bottom: 12px;
         padding: 5px 10px;   
@@ -996,8 +999,8 @@ footer p i{
         margin-bottom: 10px;
     }
     .projects div article p{
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 13px;
+        line-height: 21px;
         margin-bottom: 12px;
     }
     .projects div article a{
@@ -1023,7 +1026,7 @@ footer p i{
         margin-bottom: 30px;
     }
     .writing div h4{
-        font-size: 17px;
+        font-size: 20px;
         line-height: 25px;
         margin-bottom: 20px;
     }
@@ -1032,8 +1035,8 @@ footer p i{
         position: unset;
     }
     .writing div p{
-        font-size: 12px;
-        line-height: 18px;
+        font-size: 13px;
+        line-height: 20px;
         margin-bottom: 15px;
     }
     .writing div span{
@@ -1060,7 +1063,7 @@ footer p i{
         height: 180px;
     }
     .testimonial p{
-        font-size: 12px;
+        font-size: 13px;
         line-height: 22px;
     }
     .testimonial img{
@@ -1111,26 +1114,19 @@ footer p i{
 
 
 @media only screen and (max-width: 500px){
-    .logo{
-        height: 40px;
-    }
     .nav-btn{
-        top: 17px;
-    }
-    .nav-btn i{
-        font-size: 17px;
+        top: 15px;
     }
     .logo img{
-        width: 27px;
+        width: 30px;
     }
     .logo h1{
-        font-size: 16px;
+        font-size: 25px;
     }
     .header-nav{
         padding-top: 30px;
     }
     .header-nav ul li{
-        font-size: 13px;
         padding: 17px 0;
     }
     .tagline{
@@ -1138,29 +1134,27 @@ footer p i{
     }
     .tagline h1{
         text-align: center;
-        font-size: 35px;
-        line-height: 40px;
+        font-size: 45px;
+        line-height: 55px;
     }
     .info h2{
-        font-size: 14px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         line-height: 25px;
     }
     .info p{
-        font-size: 12px;
+        font-size: 15px;
         width: 90%;
-        line-height: 15px;
+        line-height: 22px;
     }
     .soc-card{
-        height: 30px;
         width: 60%;
     }
     .soc-card i{
-        font-size: 16px;
+        font-size: 20px;
     }
     .about h2, .projects h2, .writing h2,
     .contact h2, .testimonials h2{
-        font-size: 17px;
+        font-size: 25px;
         margin-bottom: 10px;
     }
 
@@ -1174,7 +1168,8 @@ footer p i{
         width: 100%;
     }
     .about article p{
-        line-height: 19px;
+        line-height: 22px;
+        font-size: 12px;
         margin-bottom: 10px;
     }
     .abt-cta{
@@ -1204,12 +1199,12 @@ footer p i{
         width: 100%;
     }
     .projects div article h3{
-        font-size: 15px;
+        font-size: 16px;
         margin-bottom: 7px;
     }
     .projects div article p{
         font-size: 12px;
-        line-height: 18px;
+        line-height: 20px;
         margin-bottom: 10px;
     }
     .writing{
@@ -1222,13 +1217,13 @@ footer p i{
         margin-bottom: 30px;
     }
     .writing div h4{
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 16px;
+        line-height: 23px;
         margin-bottom: 15px;
     }
     .writing div p{
         font-size: 12px;
-        line-height: 18px;
+        line-height: 22px;
         margin-bottom: 15px;
     }
     .to-blog{
@@ -1245,7 +1240,7 @@ footer p i{
     }
     .testimonial p{
         font-size: 12px;
-        line-height: 20px;
+        line-height: 22px;
         margin-bottom: 20px;
     }
     .testimonial h6{
@@ -1253,7 +1248,7 @@ footer p i{
         line-height: 16px;
     }
     .testimonial h6 span{
-        font-size: 11px;
+        font-size: 12px;
     }
     .contact article{
         width: 100%;

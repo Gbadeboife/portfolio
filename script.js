@@ -5,6 +5,7 @@ var openBtn=document.querySelector('.fa-bars')
 var closeBtn=document.querySelector('.fa-xmark')
 var header=document.getElementsByTagName('header')
 
+
 function toggleMenu(){
     if(menuStatus==false){
         navBar.style.display='block'
@@ -20,6 +21,7 @@ function toggleMenu(){
         socCard.style.display='inline-flex'
         openBtn.style.display='none'
         closeBtn.style.display='inline'
+        document.body.style.overflow='hidden'
         menuStatus=true
     }  else if (menuStatus==true){
         navBar.style.display='none'
@@ -31,6 +33,7 @@ function toggleMenu(){
         socCard.style.display='none'
         openBtn.style.display='inline'
         closeBtn.style.display='none'
+        document.body.style.overflow='unset'
         menuStatus=false
     } else {
         null
