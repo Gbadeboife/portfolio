@@ -855,8 +855,8 @@ footer p i{
     header{
         align-items: unset;
         padding: 5px 5% 5px;
-        backdrop-filter: blur(10px);
-        background-color: #060918cb;
+        backdrop-filter: blur(15px);
+        background-color: #060918da;
         position: fixed;
         z-index: 100;
     }
