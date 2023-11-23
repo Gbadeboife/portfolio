@@ -4,6 +4,9 @@ var socCard=document.querySelector('.soc-card')
 var openBtn=document.querySelector('.fa-bars')
 var closeBtn=document.querySelector('.fa-xmark')
 var header=document.getElementsByTagName('header')
+var headerLink=document.querySelectorAll('.link')
+var viewportWidth = window.innerWidth;
+
 
 
 function toggleMenu(){
@@ -61,10 +64,15 @@ function handleViewportChange() {
             navBar.style.display='none'
             socCard.style.display='none'
         }
-
+        
     }
-  }
+}
+if (viewportWidth < 800) {
+    headerLink.forEach((link) => {
+        link.addEventListener('click', toggleMenu);
+    });
+}
 
-  window.addEventListener('resize', handleViewportChange);
+window.addEventListener('resize', handleViewportChange);
 
   handleViewportChange();
