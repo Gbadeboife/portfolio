@@ -1117,6 +1117,9 @@ footer p i{
     .nav-btn{
         top: 15px;
     }
+    .landing{
+        margin-bottom: 20px;
+    }
     .logo img{
         width: 30px;
     }
