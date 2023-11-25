@@ -57,7 +57,7 @@ function handleViewportChange() {
         openBtn.style.display='inline'
         closeBtn.style.display='none'
         menuStatus=false
-
+        document.body.style.overflow='unset'
     }
     if (viewportWidth < 800) {
         if(menuStatus==false){
