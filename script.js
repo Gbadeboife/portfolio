@@ -74,5 +74,3 @@ if (viewportWidth < 800) {
 }
 
 window.addEventListener('resize', handleViewportChange);
-
-  handleViewportChange();
