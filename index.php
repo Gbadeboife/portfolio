@@ -12,6 +12,29 @@
     <script src="https://kit.fontawesome.com/22950278df.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+
+    <?php
+    if(!empty($_POST["send"])) {
+        $userName = $_POST["name"];
+      $userEmail = $_POST["email"];
+        $userPhone = $_POST["phone"];
+        $userMessage = $_POST["message"];
+        $toEmail = "gbadeboifedayo@gmail.com";
+      
+        $mailHeaders = "Name: " . $userName .
+        "\r\n Email: ". $userEmail  . 
+        "\r\n Phone: ". $userPhone  . 
+        "\r\n Message: " . $userMessage . "\r\n";
+    
+        if(mail($toEmail, $userName, $mailHeaders)) {
+            $message = "Your contact information is received successfully.";
+        }
+    }
+    ?>
+    
+
+
     <header>
         <div class="logo">
             <img src="images/logo-img.jpg" alt="logo image">
@@ -159,7 +182,8 @@
             <div class="test-carousel">
                 <div class="testimonial">
                     <p>"Working with Ifedayo was a good choice as he exceeded my expectations and delivered a website that suits my brand.
-                         He is incredibly talented but what really makes him stand out is his creativity and professionalism. Obviously
+                         He is incredibly talented but what really makes him stand out is his creativity and prof;
+                         essionalism. Obviously
                           passionate about the work, I wouldn't hesitate to recommend his services."
                     </p>
                     <aside class="card-info">
@@ -176,17 +200,25 @@
                 <h3>Got something in mind?</h3>
                 <p>Tell me your ideas and let's create something <span>spectacular!</span></p>
             </article>
-            <form action="">
+            <form name="contact-form" method="post">
                 <label for="name">Name</label>
-                <input type="text" name="name">
+                <input type="text" name="name" required>
 
                 <label for="email">Email</label>
-                <input type="email" name="email">
+                <input type="email" name="email" required>
 
                 <label for="message">Message</label>
-                <textarea name="message"></textarea>
+                <textarea name="message" required></textarea>
                 
                 <input type="submit" value="Submit">
+
+                <?php if (! empty($message)) {?>
+                  <div class='success'>
+                    <strong><?php echo $message; ?>	</strong>
+                    </div>
+                <?php } ?>
+
+
             </form>
         </section>
 
@@ -198,3 +230,5 @@
     
 </body>
 </html>
+
+
