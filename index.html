@@ -13,28 +13,6 @@
 </head>
 <body>
 
-
-    <?php
-    if(!empty($_POST["send"])) {
-        $userName = $_POST["name"];
-      $userEmail = $_POST["email"];
-        $userPhone = $_POST["phone"];
-        $userMessage = $_POST["message"];
-        $toEmail = "gbadeboifedayo@gmail.com";
-      
-        $mailHeaders = "Name: " . $userName .
-        "\r\n Email: ". $userEmail  . 
-        "\r\n Phone: ". $userPhone  . 
-        "\r\n Message: " . $userMessage . "\r\n";
-    
-        if(mail($toEmail, $userName, $mailHeaders)) {
-            $message = "Your contact information is received successfully.";
-        }
-    }
-    ?>
-    
-
-
     <header>
         <div class="logo">
             <img src="images/logo-img.jpg" alt="logo image">
@@ -200,7 +178,7 @@
                 <h3>Got something in mind?</h3>
                 <p>Tell me your ideas and let's create something <span>spectacular!</span></p>
             </article>
-            <form name="contact-form" method="post">
+            <form name="contact-form" method="post" action="/api/submit">
                 <label for="name">Name</label>
                 <input type="text" name="name" required>
 
@@ -210,13 +188,7 @@
                 <label for="message">Message</label>
                 <textarea name="message" required></textarea>
                 
-                <input type="submit" value="Submit">
-
-                <?php if (! empty($message)) {?>
-                  <div class='success'>
-                    <strong><?php echo $message; ?>	</strong>
-                    </div>
-                <?php } ?>
+                <input type="submit" value="Submit" name="send">
 
 
             </form>
