@@ -472,6 +472,8 @@ header{
     box-shadow: 0 3px 10px #2d9da9eb;
 }
 .contact form textarea{
+    font-size: inherit;
+    font-family: inherit;
     min-width: 100%;
     padding: 15px;
     border: none;
