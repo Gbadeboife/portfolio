@@ -462,6 +462,7 @@ header{
     font-size: 15px;
     color: #060918;
     padding: 0 15px;
+    font-family: inherit;
     margin-bottom: 30px;
     transition: 0.2s ease;
     border-radius: 5px;
@@ -472,9 +473,10 @@ header{
     box-shadow: 0 3px 10px #2d9da9eb;
 }
 .contact form textarea{
-    font-size: inherit;
-    font-family: inherit;
+    font-size: 15px;
+    color: unset;
     min-width: 100%;
+    font-family: inherit;
     padding: 15px;
     border: none;
     max-width: 100%;
@@ -618,9 +620,6 @@ footer p i{
     .testimonial p{
         font-size: 13px;
         line-height: 22px;
-    }
-    .testimonial img{
-        height: 3px;
     }
     .testimonial h6{
         font-size: 13px;
@@ -1110,7 +1109,7 @@ footer p i{
         margin-bottom: 20px;
         padding: 10px;
         padding: 0 10px;
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 
