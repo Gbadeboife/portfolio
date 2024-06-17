@@ -8,6 +8,9 @@ async function handler(req, res) {
 
         // Set up nodemailer
         let transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com",
+            port: 465,
+            secure: true,
             service: 'gmail',
             auth: {
                 user: process.env.GMAIL_USER, 
