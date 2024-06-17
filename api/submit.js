@@ -1,6 +1,8 @@
 const nodemailer=require('nodemailer')
 
-
+console.log(process.env.GMAIL_USER);
+console.log(process.env.GMAIL_PASS);
+console.log(process.env.RECEIVER_EMAIL);
 
 async function handler(req, res) {
     if (req.method === 'POST') {
@@ -11,7 +13,6 @@ async function handler(req, res) {
             host: "smtp.gmail.com",
             port: 465,
             secure: true,
-            service: 'gmail',
             auth: {
                 user: process.env.GMAIL_USER, 
                 pass: process.env.GMAIL_PASS  
