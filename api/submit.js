@@ -1,8 +1,8 @@
-import nodemailer from 'nodemailer';
+const nodemailer=require('nodemailer')
 require('dotenv').config()
 
 
-export default async function handler(req, res) {
+async function handler(req, res) {
     if (req.method === 'POST') {
         const { name, email, message } = req.body;
 
