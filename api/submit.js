@@ -1,4 +1,3 @@
-
 function sendMail(event){
 
     event.preventDefault
@@ -19,3 +18,5 @@ function sendMail(event){
     })
 }
 
+
+export default sendMail
