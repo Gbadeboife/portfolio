@@ -1,43 +1,21 @@
-const nodemailer=require('nodemailer')
 
-console.log(process.env.GMAIL_USER);
-console.log(process.env.GMAIL_PASS);
-console.log(process.env.RECEIVER_EMAIL);
+function sendMail(event){
 
-async function handler(req, res) {
-    if (req.method === 'POST') {
-        const { name, email, message } = req.body;
+    event.preventDefault
 
-        // Set up nodemailer
-        let transporter = nodemailer.createTransport({
-            host: "smtp.gmail.com",
-            port: 465,
-            secure: true,
-            auth: {
-                user: process.env.GMAIL_USER, 
-                pass: process.env.GMAIL_PASS  
-            }
-        });
+    var contactForm= document.getElementById('contact-form')
+    var msg= document.getElementById('msg')
 
-        // Email content
-        let mailOptions = {
-            from: process.env.GMAIL_USER,
-            to: process.env.RECEIVER_EMAIL,
-            subject: 'New Form Submission',
-            html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`
-        };
+    var serviceId= process.env.SERVICE_ID
+    var templateId= process.env.TEMPLATE_ID
 
-        try {
-            await transporter.sendMail(mailOptions);
-            res.status(200).send('Form submitted successfully');
-        } catch (error) {
-            res.status(500).send('Error sending email');
-        }
-    } else {
-        res.status(405).send('Method Not Allowed');
-    }
-    
+    emailjs.sendForm( serviceId , templateId , contactForm ).then(function (res){
+        msg.style.display='block'
+        
+        setTimeout(() => {
+            msg.style.display='none'
+            contactForm.reset()
+        }, 3000);
+    })
 }
 
-
-export default handler

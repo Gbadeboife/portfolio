@@ -456,10 +456,10 @@ header{
     display: block;
     margin-bottom: 10px;
 }
-.contact form input{
+.contact form input, .submit-btn{
     height: 50px;
     width: 100%;
-    font-size: 15px;
+    font-size: 14px;
     color: #060918;
     padding: 0 15px;
     font-family: inherit;
@@ -469,7 +469,7 @@ header{
     border: none;
     outline: none;
 }
-.contact form input:focus{
+.contact form input, .submit-btn:focus{
     box-shadow: 0 3px 10px #2d9da9eb;
 }
 .contact form textarea{
@@ -491,10 +491,18 @@ header{
 .contact form textarea:focus{
     box-shadow: 0 3px 10px #2d9da9eb;
 }
-.contact form input[type='submit']{
+.contact form #msg{
+    display: block;
+    color: rgb(150 161 192);
+    line-height: 18px;
+    display: none;
+    font-size: 15px;
+}
+.submit-btn{
     width: unset;
     font-family: inherit;
     height: unset;
+    margin-bottom: 20px;
     font-weight: 600;
     font-size: 15px;
     color: #060918;
@@ -505,7 +513,7 @@ header{
     background: linear-gradient(to left, white 50%, transparent 50%) right;
     background-size: 210% 100%;
 }
-.contact form input[type='submit']:hover{
+.submit-btn:hover{
     transform: translateY(-5px);
     color: white;
     background-position: left;
@@ -636,13 +644,18 @@ footer p i{
     .contact form label{
         font-size: 14px;
     }
-    .contact form input{
+    .contact form input, .submit-btn{
         height: 40px;
         margin-bottom: 25px;
         font-size: 14px;
     }
-    .contact form input[type='submit']{
+    .contact form #msg{
+        font-size: 13px;   
+    }
+
+    .submit-btn{
         font-size: 13px;
+        margin-bottom: 15px;
         padding: 11px 35px;
     }
     footer{
@@ -806,18 +819,23 @@ footer p i{
     .contact form label{
         font-size: 13px;
     }
-    .contact form input{
+    .contact form input, .submit-btn{
         height: 30px;
         margin-bottom: 20px;
         font-size: 13px;
     }
+    .contact form #msg{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
     .contact form textarea{
         min-height: 70px;
         max-height: 150px;
         margin-bottom: 20px;
         font-size: 13px;
     }
-    .contact form input[type='submit']{
+    .submit-btn{
         font-size: 11px;
         padding: 8px 25px;
     }
@@ -1098,10 +1116,13 @@ footer p i{
         font-size: 12px;
         margin-bottom: 5px;
     }
-    .contact form input{
+    .contact form input, .submit-btn{
         height: 30px;
         margin-bottom: 20px;
         font-size: 12px;
+    }
+    .submit-btn{
+        margin-bottom: 10px;
     }
     .contact form textarea{
         min-height: 70px;
@@ -1274,12 +1295,12 @@ footer p i{
     .contact form label{
         font-size: 11px;
     }
-    .contact form input{
+    .contact form input, .submit-btn{
         height: 30px;
         margin-bottom: 20px;
         font-size: 12px;
     }
-    .contact form input[type='submit']{
+    .submit-btn{
         padding: 7px 20px;
     }
     footer p{

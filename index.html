@@ -5,11 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ifedayo Gbadebo</title>
     <script src="script.js" defer></script>
+
+
     <link rel="stylesheet" href="style.css">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/22950278df.js" crossorigin="anonymous"></script>
+
+    <script src="api\submit.js" type="text/javascript"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: process.env.PUBLIC_KEY,
+        });
+    })();
+    </script>
+
 </head>
 <body>
 
@@ -177,19 +195,19 @@
                 <h3>Got something in mind?</h3>
                 <p>Tell me your ideas and let's create something <span>spectacular!</span></p>
             </article>
-            <form name="contact-form" method="post" action="/api/submit">
+            <form name="contact-form" id="contact-form" method="post">
                 <label for="name">Name</label>
-                <input type="text" name="name" required>
+                <input type="text" id="name" name="name" required>
 
                 <label for="email">Email</label>
-                <input type="email" name="email" required>
+                <input type="email" id="email" name="email" required>
 
                 <label for="message">Message</label>
-                <textarea name="message" required></textarea>
+                <textarea id="message" name="message" required></textarea>
                 
-                <input type="submit" value="Submit" name="send">
+                <button class="submit-btn" disabled type="button" onclick="sendMail(event)" >Submit</button>
 
-
+                <span Id="msg">Thank you for your message! I will get back to you soon.</span>
             </form>
         </section>
 
@@ -197,6 +215,7 @@
             <p><i class="fa-regular fa-copyright"></i> Copyright 2023. Made by <span>Gbadebo Ifedayo</span></p>
         </footer>
     </main>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     
 </body>
