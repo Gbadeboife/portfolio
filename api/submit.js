@@ -6,8 +6,8 @@ function sendMail(event){
     var contactForm= document.getElementById('contact-form')
     var msg= document.getElementById('msg')
 
-    var serviceId= process.env.SERVICE_ID
-    var templateId= process.env.TEMPLATE_ID
+    var serviceId= 'service_g1aomdf'
+    var templateId= 'template_l5fythe'
 
     emailjs.sendForm( serviceId , templateId , contactForm ).then(function (res){
         msg.style.display='block'
