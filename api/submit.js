@@ -19,6 +19,10 @@ function sendMail(event){
         setTimeout(() => {
             msg.style.display='none'
             contactForm.reset()
-        }, 3000);
+        }, 3000)
+    }).catch(function (error) {
+        console.error("Failed to send email:", error);
+        msg.innerText = "Failed to send email. Please try again.";
+        msg.style.display = 'block';
     })
 }
