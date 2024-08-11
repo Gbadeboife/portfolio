@@ -9,6 +9,7 @@ function sendMail(event){
 
     }
     var msg= document.getElementById('msg')
+    var contactForm= document.getElementById('contact-form')
 
     var serviceId= 'service_g1aomdf'
     var templateId= 'template_l5fythe'
