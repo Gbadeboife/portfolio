@@ -2,13 +2,18 @@ function sendMail(event){
 
     event.preventDefault
 
-    var contactForm= document.getElementById('contact-form')
+    var params={
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+
+    }
     var msg= document.getElementById('msg')
 
     var serviceId= 'service_g1aomdf'
     var templateId= 'template_l5fythe'
 
-    emailjs.sendForm( serviceId , templateId , contactForm ).then(function (res){
+    emailjs.send( serviceId , templateId , params ).then(function (res){
         msg.style.display='block'
         
         setTimeout(() => {
@@ -17,6 +22,3 @@ function sendMail(event){
         }, 3000);
     })
 }
-
-
-export default sendMail
