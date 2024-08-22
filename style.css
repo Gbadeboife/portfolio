@@ -1,0 +1,1313 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-color: #060918;
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    padding: 50px 10% 0;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
+}
+.nav-btn{
+    display: none;
+    background: none;
+    color: none;
+    border: none;
+    outline: none;
+}
+.nav-btn i{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.logo{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.logo h1{
+    font-size: 30px;
+}
+.logo img{
+    width: 45px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+.header-nav{
+    width: 40%;
+    float: right;
+    height: 100%;
+}
+.header-nav ul{
+    list-style: none;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.header-nav ul li{
+    font-size: 16px;
+}
+.header-nav li a{
+    font-weight: 600;
+    color: inherit;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+    text-decoration: none;
+}
+.header-nav li a:after{
+    content: '';
+    display: block;
+    padding-bottom: 3px;
+    border-bottom: solid 1.5px white;
+    transition: transform .4s ease-in-out;
+    transform: scaleX(0);
+}
+.header-nav li a:hover:after{
+    transform: scaleX(1);
+}
+.header-nav li:last-of-type a:after{
+    border-bottom: unset;
+}
+.cont-link{
+    border: 1px solid white;
+    padding: 7px 25px;
+    color: #060918;
+    transition: all 0.4s ease;
+    border-radius: 20px;
+    background: linear-gradient(to left, white 50%, transparent 50%) right;
+    background-size: 210% 100%;
+}
+.cont-link:hover{
+    background-position: left;
+}
+.cont-link:hover a{
+    color: white;
+}
+.landing{
+    height: 100vh; 
+    padding: 0 10%;
+    margin-bottom: 100px;
+    padding-top: 50vh;
+}
+.landing article{
+    justify-content: space-between;
+    display: flex;
+    transform: translateY(-50%);
+}
+.tagline{
+    flex: 0.55;
+}
+.tagline h1{
+    font-size: 90px;
+    line-height: 100px;
+    font-weight: 900;
+    animation: glow 10s ease-in-out infinite
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 23px #2d9da9b9;
+    }
+    to {
+      text-shadow: 0 0 30px #34b3c1a8, 0 0 10px #4dbbc7b3;
+    }
+  }
+.info{
+    flex: 0.4;
+    height: auto;
+    display: flex;
+    padding: 10px 0 10px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info h2{
+    font-size: 30px;
+    line-height: 35px;
+}
+.info p{
+    font-size: 17px;
+    line-height: 28px;
+}
+.soc-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    border: 1px solid rgb(150 161 192);
+    height: 250px;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    border-radius: 10px;
+    right: 10px;
+    backdrop-filter: blur(5px);
+    border-radius: 10;
+    top: 50vh;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.059);
+}
+.soc-card a{
+    color: white;
+    text-decoration: none;
+}
+.soc-card i{
+    font-size: 27px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.soc-card i:hover{
+    color: rgb(150 161 192);
+}
+.about{
+    padding: 0 10%;
+    margin-bottom: 100px;
+}
+.about h2, .projects h2, .writing h2,
+ .contact h2, .testimonials h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.about article{
+    width: 55%;
+    display: inline-block;
+}
+.about article p{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 28px;
+    color: rgb(150 161 192);
+    margin-bottom: 20px;
+}
+.about article p span{
+    color: white;
+}
+.about article p a{
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.about article p a:hover{
+    color: #4dbbc7;
+    cursor: pointer;
+}
+.abt-cta{
+    color: #060918;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 13px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid white;
+    transition: all 0.3s ease;   
+    background: linear-gradient(to left, white 50%, transparent 50%) right;
+    background-size: 210% 100%;
+}
+.abt-cta:hover{
+    background-position: left;
+    color: white;
+    transform: translateY(-5px);
+}
+.skills{
+    width: 40%;
+    float: right;
+}
+.skills h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.skills ul li{
+    padding: 7px 12px;
+    list-style: none;
+    display: inline-block;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    margin-bottom: 20px;
+    margin-right: 10px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.059);
+    border: 1px solid rgb(150 161 192);
+}
+.projects{
+    padding: 0 10%;
+    margin-bottom: 100px;
+}
+.projects h2{
+    margin-bottom: 50px;
+}
+.projects div{
+    margin-bottom: 100px;
+}
+.projects div figure{
+    overflow: hidden;
+    border-radius: 20px;
+    width: 55%;
+    box-shadow: 0 3px 10px #2d9da997;
+    display: inline-block;
+}
+.projects div figure img{
+    width: 100%;
+    display: block;
+}
+.projects div article{
+    width: 35%;
+    float: right;
+}
+.projects div article h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.projects div article p{
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(150 161 192);
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+.projects div article a{
+    padding: 8px 25px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid white;
+    color: #060918;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;   
+    background: linear-gradient(to left, white 50%, transparent 50%) right;
+    background-size: 210% 100%;
+}
+.projects div article a:hover{
+    color: white;
+    transform: translateY(-5px);
+    background-position: left;
+}
+.projects div article i{
+    font-size: 12px;
+}
+.writing{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
+    height: 100vh;
+    position: relative;
+}
+.writing h2{
+    margin-bottom: 50px;
+}
+.writing div{
+    padding: 25px;
+    transition: 0.4s ease;
+    pointer-events: none;
+    width: 45%;
+    border-radius: 20px;
+    box-shadow: 0 1px 10px #2d9da953;
+
+}
+.writing div:hover{
+    box-shadow: 0 7px 15px 1px #2d9da9b9;
+}
+.writing div h4{
+    font-size: 25px;
+    margin-bottom: 25px;
+    line-height: 35px;
+}
+.writing div p{
+    font-size: 17px;
+    margin-bottom: 25px;
+    line-height: 25px;
+}
+.writing div span{
+    font-size: 15px;
+    font-weight: 600;
+}
+.writing div a{
+    color: rgb(150 161 192);
+    font-size: 15px;
+    float: right;
+    pointer-events: auto;
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+.writing div a:hover{
+    color: white;
+}
+.card-1{
+    margin-bottom: 100px;
+}
+.card-2{
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.card-3{
+    position: absolute;
+    right: 7%;
+    top: 65%;
+}
+.to-blog{
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #060918;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: 0.3s ease;
+    padding: 13px 40px;
+    text-decoration: none;
+    background: linear-gradient(to left, white 50%, transparent 50%) right;
+    background-size: 210% 100%;
+}
+.to-blog:hover{
+    transform: translateY(-5px);
+    color: white;
+    background-position: left;
+}
+.to-blog i{
+    font-size: 12px;
+}
+
+.testimonials{
+    padding: 0 10%;
+    margin-bottom: 100px;
+}
+.testimonial{
+    border: 1px solid rgb(150 161 192);
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 250px;
+    border-radius: 5px;
+}
+.testimonial p{
+    line-height: 25px;
+    color: rgb(150 161 192);
+}
+.testimonial img{
+    border-radius: 50%;
+    display: inline-block;
+    width: 40px;
+    margin-right: 10px;
+    height: 40px;
+}
+.testimonial h6{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 25px;
+    display: inline-block;
+    color: rgb(150 161 192);
+}
+.testimonial h6 span{
+    font-weight: 600;
+    font-size: 17px;
+    color: white;
+}
+.contact{
+    padding: 0 10%;
+    margin-bottom: 100px;
+}
+.contact article{
+    width: 45%;
+    vertical-align: top;
+    margin-right: 5%;
+    display: inline-block;
+}
+.contact h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.contact p{
+    font-size: 17px;
+    line-height: 25px;
+    color: rgb(150 161 192);
+}
+.contact p span{
+    color: white;
+}
+.contact form{
+    width: 45%;
+    display: inline-block;
+}
+.contact form label{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+.contact form input, .submit-btn{
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    color: #060918;
+    padding: 0 15px;
+    font-family: inherit;
+    margin-bottom: 30px;
+    transition: 0.2s ease;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.contact form input, .submit-btn:focus{
+    box-shadow: 0 3px 10px #2d9da9eb;
+}
+.contact form textarea{
+    font-size: 15px;
+    color: unset;
+    min-width: 100%;
+    font-family: inherit;
+    padding: 15px;
+    border: none;
+    max-width: 100%;
+    min-height: 100px;
+    color: #060918;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    transition: 0.2s ease;
+    max-height: 200px;
+    outline: none;
+}
+.contact form textarea:focus{
+    box-shadow: 0 3px 10px #2d9da9eb;
+}
+.contact form #msg{
+    display: block;
+    color: rgb(150 161 192);
+    line-height: 18px;
+    display: none;
+    font-size: 15px;
+}
+.submit-btn{
+    width: unset;
+    font-family: inherit;
+    height: unset;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #060918;
+    padding: 13px 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 1px solid white;
+    background: linear-gradient(to left, white 50%, transparent 50%) right;
+    background-size: 210% 100%;
+}
+.submit-btn:hover{
+    transform: translateY(-5px);
+    color: white;
+    background-position: left;
+}
+footer{
+    border-top: 1px solid rgb(150 161 192);
+    padding: 30px 0;
+}
+footer p{
+    color: rgb(150 161 192);
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+}
+footer p i{
+    font-size: 11px;
+}
+
+
+
+/*responsive code*/
+
+@media only screen and (max-width: 1200px){
+    .logo img{
+        width: 40px;
+    }
+    .logo h1{
+        font-size: 25px;
+    }
+    .header-nav ul li{
+        font-size: 14px;
+    }
+    .cont-link{
+        padding: 5px 20px;
+    }
+    .tagline h1{
+        font-size: 75px;
+        line-height: 90px;
+    }
+    .info p{
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .soc-card{
+        width: 45px;
+        padding: 8px;
+        height: 220px;
+    }
+    .soc-card i{
+        font-size: 25px;
+    }
+    .about h2, .projects h2, .writing h2,
+    .contact h2, .testimonials h2{
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+    .about article p{
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 15px;
+    }
+    .abt-cta{
+        font-size: 13px;
+        padding: 11px 35px;
+    }
+    .skills ul li{
+        font-size: 13px;
+        padding: 5px 10px;   
+    }
+    .projects h2{
+        margin-bottom: 40px;
+    }
+    .projects div article p{
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+    .projects div article a{
+        padding: 7px 20px;
+        font-size: 13px;
+    }
+    .projects div article i{
+        font-size: 11px;
+    }
+    .writing{
+        height: 110vh;
+    }
+    .writing div{
+        width: 40%;
+        padding: 20px;
+        border-radius: 18px;
+    }
+    .writing div h4{
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .writing div p{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .to-blog{
+        font-size: 13px;
+        padding: 11px 35px;
+    }
+    .card-3{
+        bottom: unset;
+        top: 60%;
+    }
+    .testimonial{
+        padding: 15px;
+    }
+    .testimonial p{
+        font-size: 13px;
+        line-height: 22px;
+    }
+    .testimonial h6{
+        font-size: 13px;
+    }
+    .testimonial h6 span{
+        font-size: 15px;
+    }
+    .contact h3{
+        font-size: 27px;
+    }
+    .contact p{
+        font-size: 15px;
+    }
+    .contact form label{
+        font-size: 14px;
+    }
+    .contact form input, .submit-btn{
+        height: 40px;
+        margin-bottom: 25px;
+        font-size: 14px;
+    }
+    .contact form #msg{
+        font-size: 13px;   
+    }
+
+    .submit-btn{
+        font-size: 13px;
+        margin-bottom: 15px;
+        padding: 11px 35px;
+    }
+    footer{
+        padding: 20px 0;
+    }
+}
+
+
+
+@media only screen and (max-width: 1000px){
+    header{
+        padding: 15px 5% 10px;
+    }
+    .landing{
+        padding: 0 5%;
+        padding-top: 50vh;
+    }
+    .logo img{
+        width: 32px;
+    }
+    .logo h1{
+        font-size: 23px;
+    }
+    .header-nav{
+        width: 45%;
+    }
+    .header-nav ul li{
+        font-size: 13px;
+    }
+    .cont-link{
+        padding: 5px 18px;
+    }
+    .tagline h1{
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .info h2{
+        font-size: 23px;
+        line-height: 33px;
+    }
+    .info p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .soc-card{
+        width: 35px;
+        right: 5px;
+        padding: 5px;
+        height: 180px;
+    }
+    .soc-card i{
+        font-size: 18px;
+    }
+    .about h2, .projects h2, .writing h2,
+    .contact h2, .testimonials h2{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .about{
+        padding: 0 5%;
+    }
+    .about article p{
+        font-size: 13px;
+        line-height: 22px;
+        margin-bottom: 13px;
+    }
+    .abt-cta{
+        font-size: 12px;
+        padding: 8px 25px;
+    }
+    .skills ul li{
+        font-size: 11px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        padding: 5px 10px;   
+    }
+    .projects, .testimonials, .contact{
+        padding: 0 5%;
+    }
+    .projects h2{
+        margin-bottom: 40px;
+    }
+    .projects div article{
+        width: 40%;
+    }
+    .projects div article h3{
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .projects div article p{
+        font-size: 13px;
+        line-height: 23px;
+        margin-bottom: 15px;
+    }
+    .projects div article a{
+        padding: 6px 15px;
+        border-radius: 5px;
+        font-size: 11px;
+    }
+    .projects div article i{
+        font-size: 10px;
+    }
+    .writing{
+        width: 90%;
+    }
+    .writing div{
+        width: 42%;
+        border-radius: 15px;
+    }
+    .writing div h4{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .writing div p{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .writing div span{
+        font-size: 13px;
+    }
+    .writing div a{
+        font-size: 13px;
+    }
+    .to-blog{
+        font-size: 11px;
+        padding: 8px 35px;
+    }
+    .to-blog i{
+        font-size: 10px;
+    }
+    .card-3{
+        bottom: unset;
+        top: 60%;
+    }
+    .testimonial p{
+        font-size: 13px;
+        line-height: 22px;
+    }
+    .testimonial img{
+        height: 30px;
+        width: 30px;
+    }
+    .testimonial h6{
+        font-size: 12px;
+    }
+    .testimonial h6 span{
+        font-size: 14px;
+    }
+    .contact article{
+        width: 40%;
+    }
+    .contact form{
+        width: 50%;
+    }
+    .contact h3{
+        font-size: 23px;
+    }
+    .contact p{
+        font-size: 13px;
+    }
+    .contact form label{
+        font-size: 13px;
+    }
+    .contact form input, .submit-btn{
+        height: 30px;
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+    .contact form #msg{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .contact form textarea{
+        min-height: 70px;
+        max-height: 150px;
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+    .submit-btn{
+        font-size: 11px;
+        padding: 8px 25px;
+    }
+    footer{
+        font-size: 10px;
+    }
+    footer p i{
+        font-size: 10px;
+    }
+}
+
+
+
+@media only screen and (max-width: 800px){
+    .logo{
+        height: 40px;
+    }
+    .nav-btn{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 5%;
+    }
+    .nav-btn i{
+        font-size: 25px;
+    }
+    .nav-btn .fa-xmark{
+        display: none;
+    }
+    .logo img{
+        width: 45px;
+    }
+    .logo h1{
+        font-size: 25px;
+    }
+    header{
+        align-items: unset;
+        padding: 5px 5% 5px;
+        backdrop-filter: blur(15px);
+        background-color: #060918da;
+        position: fixed;
+        z-index: 100;
+    }
+    .header-nav{
+        display: none;
+        position: absolute;
+        top: 60px;
+        height: 100vh;
+        width: 90%;
+        padding-top: 30px;
+    }
+    .header-nav ul{
+        flex-direction: column;
+        justify-content: unset;
+    }
+    .header-nav ul li{
+        font-size: 18px;
+        width: 100%;
+        text-align: right;
+        color: rgb(150 161 192);
+        padding: 20px 0;
+        transition: 0.3s ease;
+        border-top: 1px solid ;
+    }
+    .header-nav ul li a{
+        padding: 10px;
+        color: rgb(150 161 192);
+    }
+    .header-nav ul li a:hover{
+        color: white;
+    }
+    .header-nav ul li:first-of-type{
+        border: none;
+    }
+    .header-nav li a:after{
+        display: none;   
+    }
+    .cont-link{
+        border: none;
+        padding: 0;
+        color: white;
+        background: none;
+        border-radius: unset;
+    }
+    .landing article{
+        display: block;
+    }
+    .tagline{
+        margin-bottom: 10px;
+    }
+    .tagline h1{
+        text-align: center;
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .info h2{
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 5px;
+        line-height: 30px;
+    }
+    .info p{
+        text-align: center;
+        font-size: 15px;
+        width: 60%;
+        margin: auto;
+        line-height: 23px;
+    }
+    .soc-card{
+        height: 40px;
+        position: fixed;
+        right: unset;
+        z-index: 500;
+        padding: 0;
+        display: none;
+        align-items: center;
+        width: 40%;
+        justify-content: space-around;
+        top: unset;
+        bottom: 10%;
+        left: 50%;
+        flex-direction: row;
+        transform: translateX(-50%);
+    }
+    .soc-card i{
+        font-size: 23px;
+    }
+    .about h2, .projects h2, .writing h2,
+    .contact h2, .testimonials h2{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .about article{
+        display: block;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .skills{
+        display: block;
+        float: unset;
+        width: 100%;
+    }
+    .about article p{
+        font-size: 13px;
+        line-height: 23px;
+        margin-bottom: 13px;
+    }
+    .abt-cta{
+        font-size: 11px;
+        padding: 8px 25px;
+    }
+    .skills h3{
+        font-size: 18px;
+    }
+    .skills ul li{
+        font-size: 12px;
+        border-radius: 5px;
+        margin-bottom: 12px;
+        padding: 5px 10px;   
+    }
+    .projects h2{
+        margin-bottom: 50px;
+    }
+    .projects div figure{
+        width: 75%;
+        margin: auto;
+        margin-bottom: 30px;
+        display: block;
+    }
+    .projects div article{
+        display: block;
+        margin: auto;
+        width: 70%;
+        float: unset;
+        text-align: center;
+    }
+    .projects div article h3{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .projects div article p{
+        font-size: 13px;
+        line-height: 21px;
+        margin-bottom: 12px;
+    }
+    .projects div article a{
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 11px;
+    }
+    .projects div article i{
+        font-size: 10px;
+    }
+    .writing{
+        position: unset;
+        height: unset;
+    }
+    .writing div{
+        width: 100%;
+        display: block;
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 40px;
+    }
+    .writing h2{
+        margin-bottom: 30px;
+    }
+    .writing div h4{
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+
+    .card-2, .card-3{
+        position: unset;
+    }
+    .writing div p{
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+    .writing div span{
+        font-size: 12px;
+    }
+    .writing div a{
+        font-size: 12px;
+    }
+    .to-blog{
+        position: unset;
+        font-size: 11px;
+        padding: 8px 25px;
+    }
+    .to-blog i{
+        font-size: 10px;
+    }
+    .card-3{
+        bottom: unset;
+        top: 60%;
+    }
+    .testimonial{
+        width: 100%;
+        padding: 20px;
+        height: 180px;
+    }
+    .testimonial p{
+        font-size: 13px;
+        line-height: 22px;
+    }
+    .testimonial img{
+        height: 25px;
+        width: 25px;
+    }
+    .testimonial h6{
+        font-size: 11px;
+        line-height: 17px;
+    }
+    .testimonial h6 span{
+        font-size: 12px;
+    }
+    .contact article{
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .contact form{
+        width: 100%;
+        display: block;
+    }
+    .contact h3{
+        font-size: 20px;
+    }
+    .contact p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .contact form label{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .contact form input, .submit-btn{
+        height: 30px;
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+    .submit-btn{
+        margin-bottom: 10px;
+    }
+    .contact form textarea{
+        min-height: 70px;
+        max-height: 150px;
+        margin-bottom: 20px;
+        padding: 10px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (max-width: 500px){
+    .nav-btn{
+        top: 15px;
+    }
+    .landing{
+        margin-bottom: 20px;
+    }
+    .logo img{
+        width: 30px;
+    }
+    .logo h1{
+        font-size: 25px;
+    }
+    .header-nav{
+        padding-top: 30px;
+    }
+    .header-nav ul li{
+        padding: 17px 0;
+    }
+    .tagline{
+        margin-bottom: 10px;
+    }
+    .tagline h1{
+        text-align: center;
+        font-size: 45px;
+        line-height: 55px;
+    }
+    .info h2{
+        margin-bottom: 10px;
+        line-height: 25px;
+    }
+    .info p{
+        font-size: 15px;
+        width: 90%;
+        line-height: 22px;
+    }
+    .soc-card{
+        width: 60%;
+    }
+    .soc-card i{
+        font-size: 20px;
+    }
+    .about h2, .projects h2, .writing h2,
+    .contact h2, .testimonials h2{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .about article{
+        margin-bottom: 40px;
+    }
+
+    .skills{
+        display: block;
+        float: unset;
+        width: 100%;
+    }
+    .about article p{
+        line-height: 22px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .abt-cta{
+        padding: 7px 20px;
+    }
+    .about{
+        margin-bottom: 50px;
+    }
+    .skills h3{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .projects{
+        margin-bottom: 50px;
+    }
+    .projects h2{
+        margin-bottom: 20px;
+    }
+    .projects div{
+        margin-bottom: 70px;
+    }
+    .projects div figure{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .projects div article{
+        width: 100%;
+    }
+    .projects div article h3{
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+    .projects div article p{
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    .writing{
+        margin-bottom: 70px;
+    }
+    .writing div{
+        padding: 20px;
+    }
+    .writing h2{
+        margin-bottom: 30px;
+    }
+    .writing div h4{
+        font-size: 16px;
+        line-height: 23px;
+        margin-bottom: 15px;
+    }
+    .writing div p{
+        font-size: 12px;
+        line-height: 22px;
+        margin-bottom: 15px;
+    }
+    .to-blog{
+        font-size: 11px;
+        padding: 7px 20px;
+    }
+    .to-blog i{
+        font-size: 10px;
+    }
+    .testimonial{
+        padding: 20px;
+        margin-bottom: 50px;
+        height: auto;
+    }
+    .testimonial p{
+        font-size: 12px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+    .testimonial h6{
+        font-size: 10px;
+        line-height: 16px;
+    }
+    .testimonial h6 span{
+        font-size: 12px;
+    }
+    .contact article{
+        width: 100%;
+        display: block;
+        margin-bottom: 25px;
+    }
+    .contact form{
+        width: 100%;
+        display: block;
+    }
+    .contact h3{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .contact p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .contact form label{
+        font-size: 11px;
+    }
+    .contact form input, .submit-btn{
+        height: 30px;
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+    .submit-btn{
+        padding: 7px 20px;
+    }
+    footer p{
+        font-size: 10px;
+    }
+    footer p i{
+        font-size: 10px;
+    }
+}
+
