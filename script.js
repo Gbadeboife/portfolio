@@ -5,6 +5,7 @@ var openBtn=document.querySelector('.fa-bars')
 var closeBtn=document.querySelector('.fa-xmark')
 var header=document.getElementsByTagName('header')
 var headerLink=document.querySelectorAll('.link')
+
 var viewportWidth = window.innerWidth;
 
 
@@ -41,10 +42,12 @@ function toggleMenu(){
     } else {
         null
     }
-};
+}
 
 function handleViewportChange() {
-    var viewportWidth = window.innerWidth;
+
+    viewportWidth = window.innerWidth
+
 
     if (viewportWidth > 800) {
         navBar.style.display='block'
@@ -67,10 +70,13 @@ function handleViewportChange() {
         
     }
 }
+
+window.addEventListener('resize', handleViewportChange);
+
+
+
 if (viewportWidth < 800) {
     headerLink.forEach((link) => {
         link.addEventListener('click', toggleMenu);
     });
 }
-
-window.addEventListener('resize', handleViewportChange);
