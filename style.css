@@ -178,7 +178,7 @@ header{
     margin-bottom: 100px;
 }
 .about h2, .projects h2, .writing h2,
- .contact h2, .testimonials h2{
+ .contact h2, .experience h2{
     font-size: 40px;
     margin-bottom: 30px;
 }
@@ -205,7 +205,7 @@ header{
     color: #4dbbc7;
     cursor: pointer;
 }
-.abt-cta{
+.abt-cta, .res-cta{
     color: #060918;
     font-size: 14px;
     font-weight: 600;
@@ -219,10 +219,13 @@ header{
     background: linear-gradient(to left, white 50%, transparent 50%) right;
     background-size: 210% 100%;
 }
-.abt-cta:hover{
+.abt-cta:hover, .res-cta:hover{
     background-position: left;
     color: white;
     transform: translateY(-5px);
+}
+.res-cta{
+    margin-right: 10px;
 }
 .skills{
     width: 40%;
@@ -333,7 +336,7 @@ header{
 .writing div p{
     font-size: 17px;
     margin-bottom: 25px;
-    line-height: 25px;
+    line-height: 27px;
 }
 .writing div span{
     font-size: 15px;
@@ -388,43 +391,35 @@ header{
     font-size: 12px;
 }
 
-.testimonials{
+.experience{
     padding: 0 10%;
     margin-bottom: 100px;
 }
-.testimonial{
+.exp{
     border: 1px solid rgb(150 161 192);
     padding: 20px;
-    justify-content: space-between;
-    display: flex;
     flex-direction: column;
     width: 60%;
-    height: 250px;
     border-radius: 5px;
 }
-.testimonial p{
-    line-height: 25px;
-    color: rgb(150 161 192);
+.exp p{
+    line-height: 30px;
 }
-.testimonial img{
-    border-radius: 50%;
-    display: inline-block;
-    width: 40px;
-    margin-right: 10px;
-    height: 40px;
-}
-.testimonial h6{
-    font-size: 14px;
+
+.exp h6{
+    font-size: 20px;
     font-weight: 600;
-    line-height: 25px;
-    display: inline-block;
+    margin-bottom: 15px;
+    line-height: 22px;
+}
+.exp span{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 20px;
     color: rgb(150 161 192);
+    
 }
-.testimonial h6 span{
-    font-weight: 600;
-    font-size: 17px;
-    color: white;
-}
+
 .contact{
     padding: 0 10%;
     margin-bottom: 100px;
@@ -566,7 +561,7 @@ footer p i{
         font-size: 25px;
     }
     .about h2, .projects h2, .writing h2,
-    .contact h2, .testimonials h2{
+    .contact h2, .experience h2{
         font-size: 35px;
         margin-bottom: 25px;
     }
@@ -575,7 +570,7 @@ footer p i{
         line-height: 26px;
         margin-bottom: 15px;
     }
-    .abt-cta{
+    .abt-cta, .res-cta{
         font-size: 13px;
         padding: 11px 35px;
     }
@@ -622,19 +617,20 @@ footer p i{
         bottom: unset;
         top: 60%;
     }
-    .testimonial{
+    .exp{
         padding: 15px;
     }
-    .testimonial p{
-        font-size: 13px;
-        line-height: 22px;
+    .exp p{
+        font-size: 14px;
+        line-height: 25px;
     }
-    .testimonial h6{
-        font-size: 13px;
+    .exp h6{
+        font-size: 18px;
     }
-    .testimonial h6 span{
+    .exp span{
         font-size: 15px;
     }
+
     .contact h3{
         font-size: 27px;
     }
@@ -710,7 +706,7 @@ footer p i{
         font-size: 18px;
     }
     .about h2, .projects h2, .writing h2,
-    .contact h2, .testimonials h2{
+    .contact h2, .experience h2{
         font-size: 30px;
         margin-bottom: 20px;
     }
@@ -722,7 +718,7 @@ footer p i{
         line-height: 22px;
         margin-bottom: 13px;
     }
-    .abt-cta{
+    .abt-cta, .res-cta{
         font-size: 12px;
         padding: 8px 25px;
     }
@@ -732,7 +728,7 @@ footer p i{
         margin-bottom: 15px;
         padding: 5px 10px;   
     }
-    .projects, .testimonials, .contact{
+    .projects, .experience, .contact{
         padding: 0 5%;
     }
     .projects h2{
@@ -790,20 +786,16 @@ footer p i{
         bottom: unset;
         top: 60%;
     }
-    .testimonial p{
-        font-size: 13px;
+    .exp p{
         line-height: 22px;
     }
-    .testimonial img{
-        height: 30px;
-        width: 30px;
-    }
-    .testimonial h6{
-        font-size: 12px;
-    }
-    .testimonial h6 span{
+    .exp span{
         font-size: 14px;
     }
+    .exp h6{
+        font-size: 16px;
+    }
+
     .contact article{
         width: 40%;
     }
@@ -964,7 +956,7 @@ footer p i{
         font-size: 23px;
     }
     .about h2, .projects h2, .writing h2,
-    .contact h2, .testimonials h2{
+    .contact h2, .experience h2{
         font-size: 30px;
         margin-bottom: 15px;
     }
@@ -984,7 +976,7 @@ footer p i{
         line-height: 23px;
         margin-bottom: 13px;
     }
-    .abt-cta{
+    .abt-cta, .res-cta{
         font-size: 11px;
         padding: 8px 25px;
     }
@@ -1076,26 +1068,19 @@ footer p i{
         bottom: unset;
         top: 60%;
     }
-    .testimonial{
+    .exp{
         width: 100%;
         padding: 20px;
-        height: 180px;
     }
-    .testimonial p{
+    .exp p{
         font-size: 13px;
-        line-height: 22px;
+        line-height: 24px;
     }
-    .testimonial img{
-        height: 25px;
-        width: 25px;
+
+    .exp h6{
+        font-size: 16px;
     }
-    .testimonial h6{
-        font-size: 11px;
-        line-height: 17px;
-    }
-    .testimonial h6 span{
-        font-size: 12px;
-    }
+
     .contact article{
         width: 100%;
         display: block;
@@ -1178,9 +1163,9 @@ footer p i{
         font-size: 20px;
     }
     .about h2, .projects h2, .writing h2,
-    .contact h2, .testimonials h2{
+    .contact h2, .experience h2{
         font-size: 25px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
     .about article{
@@ -1197,7 +1182,7 @@ footer p i{
         font-size: 12px;
         margin-bottom: 10px;
     }
-    .abt-cta{
+    .abt-cta, .res-cta{
         padding: 7px 20px;
     }
     .about{
@@ -1258,23 +1243,20 @@ footer p i{
     .to-blog i{
         font-size: 10px;
     }
-    .testimonial{
+    .exp{
         padding: 20px;
         margin-bottom: 50px;
         height: auto;
     }
-    .testimonial p{
-        font-size: 12px;
-        line-height: 22px;
+    .exp p{
+        font-size: 13px;
+        line-height: 24px;
         margin-bottom: 20px;
     }
-    .testimonial h6{
-        font-size: 10px;
+    .exp h6{
         line-height: 16px;
     }
-    .testimonial h6 span{
-        font-size: 12px;
-    }
+
     .contact article{
         width: 100%;
         display: block;

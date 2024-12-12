@@ -139,16 +139,16 @@ tl7.from('.writing h2',{
 
 const tl8= gsap.timeline({
     scrollTrigger: {
-        trigger: '.testimonial',
+        trigger: 'exp',
         start: 'top 90%',
     }
 })
-tl8.from('.testimonials h2',{
+tl8.from('.experience h2',{
     y: 40,
     duration: 0.5,
     opacity: 0
 })
-.from('.testimonial', {
+.from('.exp', {
     y: 40,
     opacity: 0,
     duration: 0.5
